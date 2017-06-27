@@ -21,10 +21,11 @@ LABEL name="acme/starter-arbitrary-uid" \
 
 ### Atomic Help File - Write in Markdown, it will be converted to man format at build time.
 ### https://github.com/projectatomic/container-best-practices/blob/master/creating/help.adoc
-COPY help.1 /tmp/
+#COPY help.1 /tmp/
 COPY help.1 /
 
 ### add licenses to this directory
+RUN mkdir -p /licenses
 COPY licenses /licenses
 
 #Needed EPEL for pip - not included with RHEL
