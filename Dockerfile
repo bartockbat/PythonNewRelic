@@ -24,6 +24,9 @@ LABEL name="acme/starter-arbitrary-uid" \
 COPY help.1 /tmp/
 COPY help.1 /
 
+### add licenses to this directory
+COPY licenses /licenses
+
 #Needed EPEL for pip - not included with RHEL
 RUN rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
