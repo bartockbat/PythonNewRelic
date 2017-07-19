@@ -5,7 +5,7 @@ MAINTAINER Red Hat Systems Engineering <refarch-feedback@redhat.com>
 LABEL name="newrelic-admin-rhel73/python-agent" \
       vendor="NewRelic" \
       version="OSS" \
-      release="1" \
+      release="1"
 
 ### Atomic Help File - Write in Markdown, it will be converted to man format at build time.
 ### https://github.com/projectatomic/container-best-practices/blob/master/creating/help.adoc
