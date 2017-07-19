@@ -7,8 +7,8 @@ Instructions for building and running:
 3. Edit the newrelic.ini file - find the following:
 * `license_key = XXXXXXXXXXX` <-- replace this with your license key
 4. Save the file
-5. Build the Docker image `docker build -t rhel72/newrelicpython:oss .`
+5. Build the Docker image `docker build -t newrelic-admin-rhel73/python-agent .`
 6. Once the image is built, launch the container:
-* `docker run rhel72/newrelicpython:oss`
+* `docker run newrelic-admin-rhel73/python-agent`
 7. This will launch the container and send 5 test messages to your NewRelic account
 
