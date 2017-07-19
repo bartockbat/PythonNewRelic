@@ -1,27 +1,14 @@
-### docker build --pull -t acme/starter-arbitrary-uid -t acme/starter-arbitrary-uid:v3.2 .
-FROM registry.access.redhat.com/rhel7
+FROM registry.access.redhat.com/rhel7.3:latest
 MAINTAINER Red Hat Systems Engineering <refarch-feedback@redhat.com>
 
 ### Atomic/OpenShift Labels - https://github.com/projectatomic/ContainerApplicationGenericLabels
-LABEL name="acme/starter-arbitrary-uid" \
-      vendor="Acme Corp" \
-      version="3.2" \
+LABEL name="newrelic-admin-rhel73/python-agent" \
+      vendor="NewRelic" \
+      version="OSS" \
       release="1" \
-### Recommended labels below
-      url="https://www.acme.io" \
-      summary="Acme Corp's Starter app" \
-      description="Starter app will do ....." \
-      run='docker run -tdi --name ${NAME} \
-      -u 123456 \
-      ${IMAGE}' \
-      io.k8s.description="Starter app will do ....." \
-      io.k8s.display-name="Starter app" \
-      io.openshift.expose-services="" \
-      io.openshift.tags="acme,starter-arbitrary-uid,starter,arbitrary,uid"
 
 ### Atomic Help File - Write in Markdown, it will be converted to man format at build time.
 ### https://github.com/projectatomic/container-best-practices/blob/master/creating/help.adoc
-#COPY help.1 /tmp/
 COPY help.1 /
 
 ### add licenses to this directory
